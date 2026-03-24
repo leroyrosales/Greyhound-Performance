@@ -6,13 +6,13 @@ It trims unnecessary front-end and head output, reduces emoji-related assets, an
 
 ## Installation
 
-1. Copy the `sfas-performance` folder into `wp-content/plugins/`.
+1. Copy the `greyhound-performance` folder into `wp-content/plugins/`.
 2. Activate **Greyhound Performance** under **Plugins** in the admin.
 
 With [Lando](https://lando.dev/):
 
 ```bash
-lando wp plugin activate sfas-performance
+lando wp plugin activate greyhound-performance
 ```
 
 ## What it does
