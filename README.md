@@ -15,6 +15,18 @@ With [Lando](https://lando.dev/):
 lando wp plugin activate greyhound-performance
 ```
 
+## Admin interface
+
+After activation, go to `Settings -> Greyhound Performance` to toggle each optimization on/off:
+
+- Remove wp_head noise
+- Remove jQuery Migrate on frontend
+- Remove oEmbed hooks
+- Harden trackbacks and XML-RPC behavior
+- Disable emoji assets
+
+All options default to enabled to match existing plugin behavior.
+
 ## What it does
 
 | Area | Change |
