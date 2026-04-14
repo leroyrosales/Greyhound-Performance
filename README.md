@@ -24,8 +24,35 @@ After activation, go to `Settings -> Greyhound Performance` to toggle each optim
 - Remove oEmbed hooks
 - Harden trackbacks and XML-RPC behavior
 - Disable emoji assets
+- Remove `wp-embed`, Dashicons (guests), and unnecessary `comment-reply`
+- Optional anonymous HTML cache headers with configurable TTL
+- Optional preconnect hints for external origins (fonts/gravatar/etc.)
+- Heartbeat controls (admin/editor intervals)
+- REST API hardening controls
+- Security headers helper
+- Request exclusions by URL pattern and post type
+- Presets: Conservative / Balanced / Aggressive
+- Diagnostics, conflict checks, and maintenance tools
+- Settings import/export (JSON)
+- MU-plugin loader generator
 
 All options default to enabled to match existing plugin behavior.
+
+## Tools and diagnostics
+
+The settings screen now includes:
+
+- Active toggle and due cron diagnostics
+- Plugin overlap detection (Autoptimize, WP Rocket, Perfmatters, LiteSpeed)
+- Database cleanup action (revisions + transients)
+- Export/import config JSON
+- MU-plugin loader generation (`wp-content/mu-plugins/greyhound-performance-loader.php`)
+
+For the `Disable frontend wp-cron trigger` option, configure a real cron job on your host.
+
+## Lighthouse note
+
+Lighthouse "Use efficient cache lifetimes" for static files (`.css`, `.js`, `.woff2`) is primarily controlled by web server/CDN cache rules, not WordPress PHP alone. This plugin can set cache headers for HTML responses, but static asset TTL should be configured in nginx/Apache/CDN for best results.
 
 ## What it does
 
